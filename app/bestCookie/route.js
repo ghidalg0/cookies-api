@@ -1,5 +1,3 @@
-import { NextResponse } from "next/server";
-
 export async function GET() {
   const cookie = {
     name: "Chocolate Cookie",
@@ -8,5 +6,10 @@ export async function GET() {
     picture: "choco",
   };
 
-  return NextResponse.json({ cookie }).status(200);
+  return new Response(JSON.stringify({ cookie }), {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 }
