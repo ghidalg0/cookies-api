@@ -1,5 +1,12 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  return NextResponse.json({ message: "Hello from the API!" });
+  const cookie = {
+    name: "Chocolate Cookie",
+    description: "Best cookie ever, so yummy 🍪",
+    price: 2.99,
+    picture: "choco",
+  };
+
+  return NextResponse.json(cookie).status(200);
 }
