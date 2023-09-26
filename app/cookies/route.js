@@ -34,7 +34,7 @@ export async function GET() {
       name: "Raspberry Cookie",
       description: "Fresh raspberries, so yummy!",
       price: "2.25",
-      picture: "caramel",
+      picture: "raspberry",
     },
   ];
 
