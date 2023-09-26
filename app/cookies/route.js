@@ -38,12 +38,12 @@ export async function GET() {
     },
   ];
 
-  setTimeout(() => {
-    return new Response(JSON.stringify({ cookies }), {
-      status: 200,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-  }, 2000);
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
+  return new Response(JSON.stringify({ cookies }), {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 }
