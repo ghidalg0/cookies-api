@@ -40,5 +40,5 @@ export async function GET() {
     },
   ];
 
-  return NextResponse.json(cookies).status(200);
+  return NextResponse.json({ cookies }).status(200);
 }

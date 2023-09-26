@@ -8,5 +8,5 @@ export async function GET() {
     picture: "choco",
   };
 
-  return NextResponse.json(cookie).status(200);
+  return NextResponse.json({ cookie }).status(200);
 }
