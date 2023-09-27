@@ -11,6 +11,8 @@ export async function GET() {
   // Add a delay of 2 seconds before sending the response
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
-  // Use NextResponse to set the JSON response and status code
-  return NextResponse.json(cookie);
+  return NextResponse.json(cookie, {
+    status: 200,
+    delay: 2000,
+  });
 }
