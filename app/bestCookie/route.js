@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 export async function GET() {
   const cookie = {
     name: "Chocolate Cookie",
@@ -6,10 +8,9 @@ export async function GET() {
     picture: "choco",
   };
 
-  return new Response(JSON.stringify({ cookie }), {
-    status: 200,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  // Add a delay of 2 seconds before sending the response
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
+  // Use NextResponse to set the JSON response and status code
+  return NextResponse.json({ cookie }).setStatus(200);
 }
